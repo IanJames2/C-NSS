@@ -46,65 +46,53 @@ void MooseSays(string message)
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("How are you today?");
 
-static void Main()
-{
-    AllQuestions questions = AllQuestions();
-    foreach(string question in questions)
-    {
-        Console.WriteLine(question);
-    }
-    /*
-    AllPositiveAnswers positiveAnswers = AllPositiveAnswers();
-    foreach(string positiveAnswer in positiveAnswers)
-    {
-    Console.WriteLine(positiveAnswer);
-    }
 
-    AllNegativeAnswers negativeAnswers = AllNegativeAnswers();
-    foreach(string negativeAnswer in negativeAnswers)
+List<Question> questions = new List<Question>
+{
+    new Question
     {
-        Console.WriteLine(negativeAnswer);
+        Text = "Are you enthusiastic?",
+        PositiveAnswer = "Yay!",
+        NegativeAnswer = "You should try it!"
+    },
+    new Question
+    {
+        Text = "Do you love C# yet?",
+        PositiveAnswer = "Good job sucking up to your instructor!",
+        NegativeAnswer = "You will...oh, yes, you will..."
+    },
+    new Question
+    {
+        Text = "Do you want to know a secret?",
+        PositiveAnswer = "ME TOO!!!! I love secrets...tell me one!",
+        NegativeAnswer = "Oh, no...secrets are the best, I love to share them!"
     }
-    */
+};
+
+var listOfQuestions = questions.Where(q => q.Text.Contains("?"));
+
+foreach (Question question in questions)
+{
+    Console.WriteLine(question.Text);
 }
 
-public class AllQuestions : IEnumerable
+var listOfPositiveAnswers = questions.Where(pa => pa.Text.Contains("!"));
+foreach (Question PositiveAnswer in questions)
 {
-    private string[] questions = {"Are you enthusiastic?", "Do you love C# yet?", "Do you want to know a secret?"};
-
-    public IEnumerator GetEnumerator()
-    {
-        for (int Index = 0; Index < questions.Length; Index++)
-        {
-            yield return questions[Index];
-        }
-    }
-}
-/*
-public class AllPositiveAnswers : IEnumerable
-{
-    private string[] positiveAnswers = {"Yay!", "Good job sucking up to your instructor!", "ME TOO!!!! I love secrets...tell me one!"};
-
-    public IEnumerator GetEnumerator()
-    {
-        for (int Index = 0; Index < positiveAnswers.Length; Index++)
-        {
-            yield return answers[Index];
-        }
-    }
+    Console.WriteLine(PositiveAnswer.PositiveAnswer);
 }
 
-public class AllQuestions : IEnumerable
+var listOfNegativeAnswers = questions.Where(na => na.Text.Contains("s"));
+foreach (Question NegativeAnswer in questions)
 {
-    private string[] negativeAnswers = {"You should try it!", "You will...oh, yes, you will...", "Oh, no...secrets are the best, I love to share them!"};
-
-    public IEnumerator GetEnumerator()
-    {
-        for (int Index = 0; Index < negativeAnswers.Length; Index++)
-        {
-            yield return questions[Index];
-        }
-    }
+    Console.WriteLine(NegativeAnswer.NegativeAnswer);
 }
-*/
 
+
+public class Question
+{
+    public string Text { get; set; }
+    public string PositiveAnswer { get; set; }
+    public string NegativeAnswer { get; set; }
+
+}
