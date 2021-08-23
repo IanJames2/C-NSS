@@ -1,4 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 
 // Let the moose speak!
@@ -42,95 +46,65 @@ void MooseSays(string message)
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("How are you today?");
 
-
-bool MooseAsks(string question)
+static void Main()
 {
-    Console.Write($"{question} (Y/N): ");
-    string answer = Console.ReadLine().ToLower();
-
-    while (answer != "y" && answer != "n")
+    AllQuestions questions = AllQuestions();
+    foreach(string question in questions)
     {
-        Console.Write($"{question} (Y/N): ");
-        answer = Console.ReadLine().ToLower();
+        Console.WriteLine(question);
+    }
+    /*
+    AllPositiveAnswers positiveAnswers = AllPositiveAnswers();
+    foreach(string positiveAnswer in positiveAnswers)
+    {
+    Console.WriteLine(positiveAnswer);
     }
 
-    if (answer == "y")
+    AllNegativeAnswers negativeAnswers = AllNegativeAnswers();
+    foreach(string negativeAnswer in negativeAnswers)
     {
-        return true;
+        Console.WriteLine(negativeAnswer);
     }
-    else
+    */
+}
+
+public class AllQuestions : IEnumerable
+{
+    private string[] questions = {"Are you enthusiastic?", "Do you love C# yet?", "Do you want to know a secret?"};
+
+    public IEnumerator GetEnumerator()
     {
-        return false;
+        for (int Index = 0; Index < questions.Length; Index++)
+        {
+            yield return questions[Index];
+        }
+    }
+}
+/*
+public class AllPositiveAnswers : IEnumerable
+{
+    private string[] positiveAnswers = {"Yay!", "Good job sucking up to your instructor!", "ME TOO!!!! I love secrets...tell me one!"};
+
+    public IEnumerator GetEnumerator()
+    {
+        for (int Index = 0; Index < positiveAnswers.Length; Index++)
+        {
+            yield return answers[Index];
+        }
     }
 }
 
-// Ask a question
-void CanadaQuestion()
+public class AllQuestions : IEnumerable
 {
-    bool isTrue = MooseAsks("Is Canada real?");
-    if (isTrue)
+    private string[] negativeAnswers = {"You should try it!", "You will...oh, yes, you will...", "Oh, no...secrets are the best, I love to share them!"};
+
+    public IEnumerator GetEnumerator()
     {
-        MooseSays("Really? It seems very unlikely.");
-    }
-    else
-    {
-        MooseSays("I  K N E W  I T !!!");
+        for (int Index = 0; Index < negativeAnswers.Length; Index++)
+        {
+            yield return questions[Index];
+        }
     }
 }
-
-void EnthusiasticQuestion()
-{
-    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-    if (isEnthusiastic)
-    {
-        MooseSays("Yay!");
-    }
-    else
-    {
-        MooseSays("You should try it!");
-    }
-}
-
-void LoveCSharpQuestion()
-{
-    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-    if (doesLoveCSharp)
-    {
-        MooseSays("Good job sucking up to your instructor!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
-}
-
-void SecretQuestion()
-{
-    bool wantsSecret = MooseAsks("Do you want to know a secret?");
-    if (wantsSecret)
-    {
-        MooseSays("ME TOO!!!! I love secrets...tell me one!");
-    }
-    else
-    {
-        MooseSays("Oh, no...secrets are the best, I love to share them!");
-    }
-}
-
-void Main()
-{
-    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-    Console.WriteLine("--------------------------------------------");
-    Console.WriteLine();
-
-    // Let the moose speak!
-    MooseSays("H I, I'M  E N T H U S I A S T I C !");
-    MooseSays("I really am enthusiastic");
-
-    // As a question
-    CanadaQuestion();
-    EnthusiasticQuestion();
-    LoveCSharpQuestion();
-    SecretQuestion();
-}
+*/
 
