@@ -70,6 +70,13 @@ Console.WriteLine();
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("I really am enthusiastic");
 
-// As a question
-bool isTrue = MooseAsks("Did Chris Paul ever play for New Orleans?");
-Console.WriteLine(isTrue);
+// Ask a question
+bool isTrue = MooseAsks("Is Canada real?");
+if (isTrue)
+{
+    MooseSays("Really? It seems very unlikely.");
+}
+else
+{
+    MooseSays("I  K N E W  I T !!!");
+}
