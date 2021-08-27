@@ -11,8 +11,8 @@ namespace Classes
 
             // Create three employees
             var Frank = new Employee();
-            var Fred = new Employee()
-            var Ed = new Employee()
+            var Fred = new Employee();
+            var Ed = new Employee();
 
             // Assign the employees to the company
             /*
@@ -22,3 +22,4 @@ namespace Classes
         }
     }
 }
+

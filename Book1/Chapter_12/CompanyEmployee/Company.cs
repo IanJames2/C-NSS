@@ -24,7 +24,7 @@ namespace Classes
 
         public void ListEmployees()
         {
-            Console.WriteLine($" {Employee.FirstName} {Employee.LastName} works for {Company.Name} as {Employee.Title} since {Employee.StartDate}")
+            Console.WriteLine($" {Employee.FirstName} {Employee.LastName} works for {Company.Name} as {Employee.Title} since {Employee.StartDate}");
         }
     }
 }
