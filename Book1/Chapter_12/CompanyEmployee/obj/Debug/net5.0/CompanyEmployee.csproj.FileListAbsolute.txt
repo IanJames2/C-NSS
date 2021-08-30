@@ -3,3 +3,14 @@ C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0
 C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0\CompanyEmployee.AssemblyInfoInputs.cache
 C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0\CompanyEmployee.AssemblyInfo.cs
 C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0\CompanyEmployee.csproj.CoreCompileInputs.cache
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\bin\Debug\net5.0\CompanyEmployee.exe
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\bin\Debug\net5.0\CompanyEmployee.deps.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\bin\Debug\net5.0\CompanyEmployee.runtimeconfig.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\bin\Debug\net5.0\CompanyEmployee.runtimeconfig.dev.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\bin\Debug\net5.0\CompanyEmployee.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\bin\Debug\net5.0\ref\CompanyEmployee.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\bin\Debug\net5.0\CompanyEmployee.pdb
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0\CompanyEmployee.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0\ref\CompanyEmployee.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0\CompanyEmployee.pdb
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\CompanyEmployee\obj\Debug\net5.0\CompanyEmployee.genruntimeconfig.cache
