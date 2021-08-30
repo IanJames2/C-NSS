@@ -21,10 +21,16 @@ namespace Classes
                 2. The date it was created
             The constructor will set the value of the public properties
         */
-
-        public void ListEmployees()
+        public Company(string name, DateTime createdOn)
         {
-            Console.WriteLine($" {Employee.FirstName} {Employee.LastName} works for {Company.Name} as {Employee.Title} since {Employee.StartDate}");
+            Name = name;
+            CreatedOn = createdOn;
+            Employees = new List<Employee>();
+        }
+
+        public void ListEmployees(Employee employee, Company company)
+        {
+            Console.WriteLine($" {employee.FirstName} {employee.LastName} works for {company.Name} as {employee.Title} since {employee.StartDate}");
         }
     }
 }
