@@ -7,7 +7,7 @@ namespace Roommates
 {
     class Program
     {
-        private const string CONNECTION_STRING = @"server=localhost\SQLExpress;database=Roommates;integrated security=true";
+        private const string CONNECTION_STRING = @"server=LAPTOP-VLARFCJI\SQLEXPRESS;database=Roommates;integrated security=true";
         static void Main(string[] args)
         {
             RoomRepository roomRepo = new RoomRepository(CONNECTION_STRING);
