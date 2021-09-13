@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Roommates.Models;
 using Microsoft.Data.SqlClient;
 
@@ -14,7 +10,7 @@ namespace Roommates.Repositories
     {
         public ChoreRepository(string connectionString) : base(connectionString) { }
         //Use a List of Chores to call the c# built in method GetAll. Make it public
-        public List<ChoreRepository> GetAll()
+        public List<Chore> GetAll()
         {
             //import SqlConnection and make a variable. Set that var equal to Connection
             using (SqlConnection conn = Connection)
@@ -30,7 +26,7 @@ namespace Roommates.Repositories
                     //Create an instance of SqlDataReader and set that equal to C# built in method ExecuteReader()
                     SqlDataReader reader = cmd.ExecuteReader();
                     //Create a new List of Chores.
-                    List<ChoreRepository> choreList = new List<ChoreRepository>();
+                    List<Chore> choreList = new List<Chore>();
                     //Create a while loop. While the reader Reads make values of all of the columns from the Chores table. Set a new Chore with those values, than add it to the chore table.
                     while(reader.Read())
                     {
@@ -57,20 +53,26 @@ namespace Roommates.Repositories
             }
         }
 
-
+        //Make an Insert Method for the Chore that does not return anything.
         public void Insert(Chore chore)
         {
+            //import SqlConnection and set the var equal to connection
             using (SqlConnection conn = Connection)
             {
+                //Open the connection.
                 conn.Open();
+                //Use the CreateCommand C# built in method.
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
+                    //Make Sql Query to insert the fields into the Chore Table.
                     cmd.CommandText = @"INSERT INTO Room (Name) 
                                          OUTPUT INSERTED.Id 
                                          VALUES (@name)";
+                    //Add Each individual parameter from the Chore Table.
                     cmd.Parameters.AddWithValue("@name", chore.Name);
+                    // Retrieve the id of the newly made chore using the ExecuteScalar built in method.
                     int id = (int)cmd.ExecuteScalar();
-
+                    //Set the choreId equal to id.
                     chore.Id = id;
                 }
             }
