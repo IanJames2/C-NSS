@@ -20,7 +20,6 @@ namespace DogGo.Controllers
             return View(walkers);
         }
 
-
         // GET: Walkers/Details/5
         public ActionResult Details(int id)
         {
