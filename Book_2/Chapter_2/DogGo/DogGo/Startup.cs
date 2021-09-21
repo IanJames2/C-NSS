@@ -44,6 +44,7 @@ namespace DogGo
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseStatusCodePages();
 
             app.UseRouting();
 
