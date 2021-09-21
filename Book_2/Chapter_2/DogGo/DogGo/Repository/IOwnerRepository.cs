@@ -5,7 +5,7 @@ using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DogGo.Repository
+namespace DogGo.Repositories
 {
     interface IOwnerRepository
     {

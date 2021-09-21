@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 
-namespace DogGo.Repository
+namespace DogGo.Repositories
 {
     public class OwnerRepository : IOwnerRepository
     {
@@ -26,14 +26,77 @@ namespace DogGo.Repository
 
         public List<Owner> GetAllOwners()
         {
-            throw new System.Exception("Will finish later");
-        }
+            using (SqlConnection conn = Connection)
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                        SELECT Id, Email, [Name], [Address], NeighborhoodId, Phone 
+                        FROM [Owner];
+                    ";
 
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-        //Owner GetOwnerById(int id);
-        public Owner GetOwnerById(int id)
-        {
-            throw new System.Exception("Will finish later");
+                    List<Owner> owners = new List<Owner>();
+                    while (reader.Read())
+                    {
+                        Owner owner = new Owner
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                            Email = reader.GetString(reader.GetOrdinal("Email")),
+                            Name = reader.GetString(reader.GetOrdinal("Name")),
+                            Address = reader.GetString(reader.GetOrdinal("Address")),
+                            NeighborhoodId = reader.GetInt32(reader.GetOrdinal("NeighborhoodId")),
+                            Phone = reader.GetString(reader.GetOrdinal("Phone"))
+                        };
+
+                        owners.Add(owner);
+                    reader.Close();
+
+                    return owners;
+                    }
+
+                }
+
+                //Owner GetOwnerById(int id);
+                public Owner GetOwnerById(int id)
+                {
+                    using (SqlConnection conn = Connection)
+                    {
+                        conn.Open();
+                        using (SqlCommand cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = @"SELECT Id, Email, [Name], [Address], NeighborhoodId, Phone 
+                                              FROM [Owner] 
+                                              WHERE Id = @id";
+
+                            cmd.Parameters.AddWithValue("@id", id);
+
+                            SqlDataReader reader = cmd.ExecuteReader();
+
+                            if (reader.Read())
+                            {
+                                Owner owner = new Owner
+                                {
+                                    Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                                    Email = reader.GetString(reader.GetOrdinal("Email")),
+                                    Name = reader.GetString(reader.GetOrdinal("Name")),
+                                    Address = reader.GetString(reader.GetOrdinal("Address")),
+                                    NeighborhoodId = reader.GetInt32(reader.GetOrdinal("NeighborhoodId")),
+                                    Phone = reader.GetString(reader.GetOrdinal("Phone"))
+                                };
+
+                                reader.Close();
+                                return owner;
+                            }
+                            else
+                            {
+                                reader.Close();
+                                return null;
+                            }
+                        }
+                    }
+                }
+            }
         }
-    }
-}
