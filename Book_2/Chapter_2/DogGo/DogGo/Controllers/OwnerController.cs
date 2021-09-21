@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using DogGo.Models;
+using DogGo.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +9,28 @@ using System.Threading.Tasks;
 
 namespace DogGo.Controllers
 {
-    public class OwnerController : Controller
+    public class OwnersController : Controller
     {
         // GET: OwnerController
         public ActionResult Index()
         {
-            return View();
+
+            List<Owner> owners = _ownerRepo.GetAllOwners();
+
+            return View(owners);
         }
 
         // GET: OwnerController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Owner owner = _ownerRepo.GetOwnerById(id);
+
+            if (owner == null)
+            {
+                return NotFound();
+            }
+
+            return View(owner);
         }
 
         // GET: OwnerController/Create
@@ -82,6 +94,13 @@ namespace DogGo.Controllers
             {
                 return View();
             }
+        }
+
+        private readonly IOwnerRepository _ownerRepo;
+
+        public OwnersController(IOwnerRepository ownerRepository)
+        {
+            _ownerRepo = ownerRepository;
         }
     }
 }
