@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using DogGo.Repositories;
-using System;
 using System.Collections.Generic;
+using DogGo.Models;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,16 +12,28 @@ namespace DogGo.Controllers
     public class WalkersController : Controller
     {
         // GET: WalkersController
+        // GET: Walkers
         public ActionResult Index()
         {
-            return View();
+            List<Walker> walkers = _walkerRepo.GetAllWalkers();
+
+            return View(walkers);
         }
 
-        // GET: WalkersController/Details/5
+
+        // GET: Walkers/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Walker walker = _walkerRepo.GetWalkerById(id);
+
+            if (walker == null)
+            {
+                return NotFound();
+            }
+
+            return View(walker);
         }
+
 
         // GET: WalkersController/Create
         public ActionResult Create()
