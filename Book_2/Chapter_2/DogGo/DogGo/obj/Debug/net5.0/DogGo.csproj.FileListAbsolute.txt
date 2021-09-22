@@ -427,3 +427,11 @@ C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Raz
 C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Walkers\Details.cshtml.g.cs
 C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Index.cshtml.g.cs
 C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Details.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Create.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Delete.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Owners\Edit.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Index.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Details.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Create.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Edit.cshtml.g.cs
+C:\Users\ianjm\workspace\C#NSS\Book_2\Chapter_2\DogGo\DogGo\obj\Debug\net5.0\Razor\Views\Dog\Delete.cshtml.g.cs
