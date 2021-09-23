@@ -32,8 +32,10 @@ namespace DogGo.Repositories
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        SELECT Id, Email, [Name], [Address], NeighborhoodId, Phone 
+                        SELECT [Owner].Id, [Owner].Email, [Owner].[Name], [Owner].[Address], Neighborhood.Name [Neighborhood Name], [Owner].NeighborhoodId, [Owner].Phone
                         FROM [Owner]
+                        INNER JOIN Neighborhood ON [Owner].NeighborhoodId = Neighborhood.Id;
+
                     ";
 
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -50,9 +52,14 @@ namespace DogGo.Repositories
                             NeighborhoodId = reader.GetInt32(reader.GetOrdinal("NeighborhoodId")),
                             Phone = reader.GetString(reader.GetOrdinal("Phone"))
                         };
-
+                        if (!reader.IsDBNull(reader.GetOrdinal("NeighborhoodId")))
+                        {
+                            owner.Neighborhood = new Neighborhood
+                            {
+                                Name = reader.GetString(reader.GetOrdinal("Neighborhood Name"))
+                            };
+                        }
                         owners.Add(owner);
-
                     }
                     reader.Close();
 
