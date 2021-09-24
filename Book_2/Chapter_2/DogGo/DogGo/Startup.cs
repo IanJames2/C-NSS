@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace DogGo
 {
@@ -30,6 +32,8 @@ namespace DogGo
             services.AddTransient<IDogRepository, DogRepository>();
             services.AddTransient<INeighborhoodRepository, NeighborhoodRepository>();
 
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options => options.LoginPath = "/Owners/LogIn");
 
         }
 
@@ -48,10 +52,10 @@ namespace DogGo
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseStatusCodePages();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -61,5 +65,6 @@ namespace DogGo
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
     }
 }
