@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\tabloid-mvc-streamers",
+    "\\tabloid-mvc-streamers\\TabloidMVC",
+    "\\tabloid-mvc-streamers\\TabloidMVC\\Controllers",
+    "\\tabloid-mvc-streamers\\TabloidMVC\\Repositories"
+  ],
+  "SelectedNode": "\\tabloid-mvc-streamers\\TabloidMVC\\Repositories\\PostRepository.cs",
+  "PreviewInSolutionExplorer": false
+}
