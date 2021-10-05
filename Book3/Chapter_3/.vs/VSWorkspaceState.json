@@ -1,4 +1,10 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\Gifter",
+    "\\Gifter\\Gifter",
+    "\\Gifter\\Gifter\\Controllers"
+  ],
+  "SelectedNode": "\\Gifter\\Gifter\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
