@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gifter.Repositories;
 
 namespace Gifter
 {
@@ -32,6 +33,7 @@ namespace Gifter
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gifter", Version = "v1" });
             });
+            services.AddTransient<IPostRepository, PostRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
