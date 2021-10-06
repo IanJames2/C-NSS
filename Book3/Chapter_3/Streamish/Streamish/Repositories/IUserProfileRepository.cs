@@ -7,7 +7,7 @@ using Streamish.Models;
 
 namespace Streamish.Repositories
 {
-    interface IUserProfileRepository
+    public interface IUserProfileRepository
     {
         List<UserProfile> GetAll();
         UserProfile GetById(int id);
