@@ -20,8 +20,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Streamish\Streamish_Test.csproj" />
+    <ProjectReference Include="..\Streamish\Streamish.csproj" />
   </ItemGroup>
-
 
 </Project>

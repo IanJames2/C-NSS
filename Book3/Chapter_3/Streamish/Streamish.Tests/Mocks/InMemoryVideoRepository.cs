@@ -4,7 +4,7 @@ using System.Linq;
 using Streamish.Models;
 using Streamish.Repositories;
 
-namespace Streamish_Test.Tests.Mocks
+namespace Streamish.Tests.Mocks
 {
     class InMemoryVideoRepository : IVideoRepository
     {
