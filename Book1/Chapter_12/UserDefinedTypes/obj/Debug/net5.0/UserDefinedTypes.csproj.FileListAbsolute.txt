@@ -1,0 +1,16 @@
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\bin\Debug\net5.0\UserDefinedTypes.exe
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\bin\Debug\net5.0\UserDefinedTypes.deps.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\bin\Debug\net5.0\UserDefinedTypes.runtimeconfig.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\bin\Debug\net5.0\UserDefinedTypes.runtimeconfig.dev.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\bin\Debug\net5.0\UserDefinedTypes.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\bin\Debug\net5.0\ref\UserDefinedTypes.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\bin\Debug\net5.0\UserDefinedTypes.pdb
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.csproj.AssemblyReference.cache
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.AssemblyInfoInputs.cache
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.AssemblyInfo.cs
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.csproj.CoreCompileInputs.cache
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\ref\UserDefinedTypes.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.pdb
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_12\UserDefinedTypes\obj\Debug\net5.0\UserDefinedTypes.genruntimeconfig.cache

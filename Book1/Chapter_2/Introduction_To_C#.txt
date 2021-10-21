@@ -1,0 +1,132 @@
+Hello, C#
+Objectives
+After completing this lesson and working on related exercises you should be able to:
+
+Define the acronym "CLI"
+State the purpose of a *.csproj file
+State the purpose of a *.cs file
+Informally distinguish between the terms ".NET 5", ".NET Core" and ".NET Framework".
+Create a new, empty C# console program
+Write a simple "Hello World" C# console program
+Run a C# program using the dotnet run command
+Your first console application
+Let's begin with your first C# console application (also known as a "command line interface" application or "cli" app).
+
+Create a directory to hold the application.
+
+mkdir -p ~/workspace/csharp/Intro && cd $_
+Create a new console application with the dotnet command line utility.
+
+dotnet new console
+This will create (a.k.a. "scaffold") two files in the directory as well as an obj directory. Go ahead and open the Intro directory in Visual Studio Code.
+
+intro.csproj - This is the C# project file that contains certain configuration settings for your application. It's kinda like the package.json for C#.
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+</PropertyGroup>
+
+</Project>
+Program.cs - This is a C# source file. It's the file that holds your C# source code. (note the .cs file extension) Think of it as your main.js. It's where the logic of your application starts.
+
+using System;
+
+namespace Intro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+``  `
+Before we dig any deeper, let's run our new application. Back in your terminal run this command.
+
+dotnet run
+So much code...
+I suspect you weren't surprised by what happened when you ran the code. But you might be surprised at just how much code it took to simply write "Hello World!" to the screen.
+
+It turns out it doesn't actually take that much code. Let's refactor the Program.cs file so that the code is as minimal as possible while still doing the same thing.
+
+Replace everything in Program.cs with this code and run the program again.
+
+System.Console.WriteLine("Hello World!");
+That's a lot shorter.
+
+Yes, it's still a little more code than you'd write in JavaScript, but there are benefits to the verbosity of C#. Trust me.
+
+NOTE: There is a good reason the dotnet new console command created all that extra code. We just don't need it for this simple program.
+
+Making things a little more interesting
+Copy this code into your Program.cs file, replacing everything there.
+
+System.Console.Write("Who would you like to say hello to? ");
+
+string name = System.Console.ReadLine();
+
+if (string.IsNullOrWhiteSpace(name))
+{
+    System.Console.WriteLine("Fine, don't say 'hello'!");
+}
+else
+{
+    System.Console.WriteLine($"Hello, {name}!");
+}
+Take a moment to read this code. Can you predict what it will do?
+
+Once you've made your prediction, run the program.
+
+dotnet run
+Enter a name and marvel at the warm greeting you receive.
+
+What happens when you don't enter a name?
+
+Using using
+Before we move on, let's do one last refactor of our code to make it a little easier to read.
+
+Update your Program.cs file with this code.
+
+using System;
+
+Console.Write("Who would you like to say hello to? ");
+
+string name = Console.ReadLine();
+
+if (string.IsNullOrWhiteSpace(name))
+{
+    Console.WriteLine("Fine, don't say 'hello'!");
+}
+else
+{
+    Console.WriteLine($"Hello, {name}!");
+}
+What did we change? What do you think the using statement does?
+
+What's in a name?
+That which we call .NET by any other name would code as sweet.
+
+We begin our .NET journey with a warning: Microsoft is bad at naming things.
+
+In your online research you will find references to technologies called ".NET 5", "dotnet", ".NET Core", ".NET Framework" and just plain old ".NET".
+
+Once you get some experience under your belt this will all make (a little) more sense, but for now here's all you need to know...
+
+.NET 5 is the latest version of .NET, and It is what we will use in this course.
+dotnet is the command line tool we'll use during the first part of the course. It will target .NET 5 without us having to do anything special.
+.NET Core is the previous version of .NET, but it is not very old. If you find documentation, blog posts, Stack Overflow answers, etc... referring to .NET Core, most of the time the information will still be accurate and you should use it. However, you should pay attention to the version number of .NET Core. Information about versions 2.x or 3.x is much better than 1.x.
+.NET Framework is the old, Windows-only version of .NET. It was replaced by .NET Core and then by .NET 5. Even though it's old, it is still used a lot, so you'll probably find references to it on the web. We will NOT be using .NET Framework in this corse. When you find information that refers to .NET Framework, you should IGNORE IT.
+.NET is an umbrella term that might refer to ANY of the above technologies. Microsoft is trying to re-brand .NET to refer to .NET 5, but that hasn't happened (yet?). When you run into this term you should try to figure out which .NET is refers to. If you can't, ask for help or move on to another resource.
+In addition to the above terms, you might find online references to "mono", "xamarin" or "unity". These are still current technologies that are related to .NET, but they won't be covered in this corse.
+
+Pushing To Github
+Before you push to Github, make sure that you add a gitignore file to your project. In your terminal, from the root of the application run dnignore. If you get an error saying the command is not found, be sure to go back to the installation chapter and get that added to your bashrc file.
+
+Learning a Second Language
+Learning your first programming language is hard. It's hard because you're learning more than syntax, you're learning how to code at the same time.
+
+I have some good news. When it comes to learning your second language, you can transfer much of your understanding of your first language. It turns out that much of what you learned in JavaScript will apply to C# as well. There are notable differences and C# has some new concepts to learn, but a lot of the basic building blocks are the same.

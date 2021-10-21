@@ -1,0 +1,16 @@
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.csproj.AssemblyReference.cache
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.AssemblyInfoInputs.cache
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.AssemblyInfo.cs
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.csproj.CoreCompileInputs.cache
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\bin\Debug\net5.0\AnimalKingdom.exe
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\bin\Debug\net5.0\AnimalKingdom.deps.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\bin\Debug\net5.0\AnimalKingdom.runtimeconfig.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\bin\Debug\net5.0\AnimalKingdom.runtimeconfig.dev.json
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\bin\Debug\net5.0\AnimalKingdom.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\bin\Debug\net5.0\ref\AnimalKingdom.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\bin\Debug\net5.0\AnimalKingdom.pdb
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\ref\AnimalKingdom.dll
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.pdb
+C:\Users\ianjm\workspace\C#NSS\Book1\Chapter_23\AnimalKingdom\obj\Debug\net5.0\AnimalKingdom.genruntimeconfig.cache
